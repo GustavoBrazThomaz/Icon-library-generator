@@ -1,0 +1,21 @@
+{
+  "name": "icon-library-generator",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/xml2js": "^0.4.14",
+    "clipboardy": "^4.0.0",
+    "fs-extra": "^11.2.0",
+    "ts-node": "^10.9.1",
+    "xml2js": "^0.6.2"
+  }
+}
