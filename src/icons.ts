@@ -5,6 +5,7 @@ import * as xml2js from 'xml2js';
 export interface Icons {
   name: string;
   d: string;
+  viewBox: string;
 }
 
 const svgFolderPath = path.join(__dirname, 'svg');
@@ -31,7 +32,7 @@ function removeSvgExtension(fileName: string): string {
 }
 
 function parseSvgContent(fileName: string, content: string): Icons {
-  let svgObject: Icons = { name: fileName, d: '' };
+  let svgObject: Icons = { name: fileName, d: '', viewBox: '' };
 
   xml2js.parseString(content, { explicitArray: false }, (err, result) => {
     if (!err) {
@@ -40,6 +41,10 @@ function parseSvgContent(fileName: string, content: string): Icons {
           svgObject.d = result.svg.path['$'].d;
         } else if (result.svg.g && result.svg.g.path && result.svg.g.path['$'] && result.svg.g.path['$'].d) {
           svgObject.d = result.svg.g.path['$'].d;
+        }
+
+        if (result.svg['$'] && result.svg['$'].viewBox) {
+          svgObject.viewBox = result.svg['$'].viewBox;
         } else {
           console.error(`Erro ao analisar o arquivo SVG: ${fileName}`);
         }

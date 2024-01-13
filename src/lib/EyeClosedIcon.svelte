@@ -1,7 +1,4 @@
-import { Icons } from "./icons";
 
-export const svelteIcons = (icon: Icons) => {
-  return `
   <script lang="ts">
   interface GradientObj {
     colors: [string, string];
@@ -35,14 +32,14 @@ export const svelteIcons = (icon: Icons) => {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     style="width: {size}; height: {size};"
-    viewBox="${icon.viewBox}"
+    viewBox="0 0 24 24"
     fill="none"
   >
-    <g id="id_${icon.name}">
+    <g id="id_EyeClosed">
       <path
-        id="icon_${icon.name}"
-        d="${icon.d}"
-        stroke="url(#grad-${icon.name})"
+        id="icon_EyeClosed"
+        d="M20.3999 19.5001L5.3999 4.50012M10.1999 10.4417C9.82648 10.8534 9.5999 11.3942 9.5999 11.9864C9.5999 13.2762 10.6744 14.3218 11.9999 14.3218C12.611 14.3218 13.1688 14.0995 13.5926 13.7335M20.4387 14.3218C21.2649 13.0849 21.5999 12.0763 21.5999 12.0763C21.5999 12.0763 19.4153 5.10012 11.9999 5.10012C11.5836 5.10012 11.1838 5.12211 10.7999 5.16362M17.3999 17.3496C16.0225 18.2283 14.2492 18.8496 11.9999 18.8129C4.67683 18.6931 2.3999 12.0763 2.3999 12.0763C2.3999 12.0763 3.45776 8.6982 6.5999 6.64344"
+        stroke="url(#grad-EyeClosed)"
         stroke-width={weight}
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -51,7 +48,7 @@ export const svelteIcons = (icon: Icons) => {
 
     <defs>
       <linearGradient
-        id="grad-${icon.name}"
+        id="grad-EyeClosed"
         x1={getGradientDirection(gradient.direction).x1}
         y1={getGradientDirection(gradient.direction).y1}
         x2={getGradientDirection(gradient.direction).x2}
@@ -72,13 +69,13 @@ export const svelteIcons = (icon: Icons) => {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     style="width: {size}; height: {size};"
-    viewBox="${icon.viewBox}"
+    viewBox="0 0 24 24"
     fill="none"
   >
-    <g id="id_${icon.name}">
+    <g id="id_EyeClosed">
       <path
-        id="icon_${icon.name}"
-        d="${icon.d}"
+        id="icon_EyeClosed"
+        d="M20.3999 19.5001L5.3999 4.50012M10.1999 10.4417C9.82648 10.8534 9.5999 11.3942 9.5999 11.9864C9.5999 13.2762 10.6744 14.3218 11.9999 14.3218C12.611 14.3218 13.1688 14.0995 13.5926 13.7335M20.4387 14.3218C21.2649 13.0849 21.5999 12.0763 21.5999 12.0763C21.5999 12.0763 19.4153 5.10012 11.9999 5.10012C11.5836 5.10012 11.1838 5.12211 10.7999 5.16362M17.3999 17.3496C16.0225 18.2283 14.2492 18.8496 11.9999 18.8129C4.67683 18.6931 2.3999 12.0763 2.3999 12.0763C2.3999 12.0763 3.45776 8.6982 6.5999 6.64344"
         stroke={color}
         stroke-width={weight}
         stroke-linecap="round"
@@ -88,5 +85,4 @@ export const svelteIcons = (icon: Icons) => {
   </svg>
 {/if}
 
-  `;
-};
+  

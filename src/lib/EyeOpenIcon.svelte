@@ -1,7 +1,4 @@
-import { Icons } from "./icons";
 
-export const svelteIcons = (icon: Icons) => {
-  return `
   <script lang="ts">
   interface GradientObj {
     colors: [string, string];
@@ -35,14 +32,14 @@ export const svelteIcons = (icon: Icons) => {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     style="width: {size}; height: {size};"
-    viewBox="${icon.viewBox}"
+    viewBox="0 0 24 24"
     fill="none"
   >
-    <g id="id_${icon.name}">
+    <g id="id_EyeOpen">
       <path
-        id="icon_${icon.name}"
-        d="${icon.d}"
-        stroke="url(#grad-${icon.name})"
+        id="icon_EyeOpen"
+        d="M14.3999 12.0293C14.3999 13.319 13.3254 14.3646 11.9999 14.3646C10.6744 14.3646 9.5999 13.319 9.5999 12.0293C9.5999 10.7395 10.6744 9.6939 11.9999 9.6939C13.3254 9.6939 14.3999 10.7395 14.3999 12.0293Z"
+        stroke="url(#grad-EyeOpen)"
         stroke-width={weight}
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -51,7 +48,7 @@ export const svelteIcons = (icon: Icons) => {
 
     <defs>
       <linearGradient
-        id="grad-${icon.name}"
+        id="grad-EyeOpen"
         x1={getGradientDirection(gradient.direction).x1}
         y1={getGradientDirection(gradient.direction).y1}
         x2={getGradientDirection(gradient.direction).x2}
@@ -72,13 +69,13 @@ export const svelteIcons = (icon: Icons) => {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     style="width: {size}; height: {size};"
-    viewBox="${icon.viewBox}"
+    viewBox="0 0 24 24"
     fill="none"
   >
-    <g id="id_${icon.name}">
+    <g id="id_EyeOpen">
       <path
-        id="icon_${icon.name}"
-        d="${icon.d}"
+        id="icon_EyeOpen"
+        d="M14.3999 12.0293C14.3999 13.319 13.3254 14.3646 11.9999 14.3646C10.6744 14.3646 9.5999 13.319 9.5999 12.0293C9.5999 10.7395 10.6744 9.6939 11.9999 9.6939C13.3254 9.6939 14.3999 10.7395 14.3999 12.0293Z"
         stroke={color}
         stroke-width={weight}
         stroke-linecap="round"
@@ -88,5 +85,4 @@ export const svelteIcons = (icon: Icons) => {
   </svg>
 {/if}
 
-  `;
-};
+  

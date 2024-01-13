@@ -8,12 +8,11 @@ async function generateIcons() {
       const iconDir = `src/lib/`;
       await fs.ensureDir(iconDir);
 
-      const filePath = `${iconDir}/${icon.name}.svelte`;
+      const filePath = `${iconDir}/${icon.name}Icon.svelte`;
       const fileContent = svelteIcons(icon)
 
       await fs.writeFile(filePath, fileContent);
     }
-
   } catch (error) {
     console.error(error);
   }
